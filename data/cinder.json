@@ -1,0 +1,2300 @@
+{
+  "cinder": [
+    {
+      "msg": "%(address)s is not within %(cidr)s.",
+      "code": 400,
+      "name": "AddressOutOfRange"
+    },
+    {
+      "msg": "User does not have admin privileges",
+      "code": 403,
+      "name": "AdminRequired"
+    },
+    {
+      "msg": "Agent-build with hypervisor %(hypervisor)s os %(os)s architecture %(architecture)s exists.",
+      "code": 500,
+      "name": "AgentBuildExists"
+    },
+    {
+      "msg": "No agent-build associated with id %(id)s.",
+      "code": 404,
+      "name": "AgentBuildNotFound"
+    },
+    {
+      "msg": "Error during following call to agent: %(method)s",
+      "code": 500,
+      "name": "AgentError"
+    },
+    {
+      "msg": "Agent does not support the call: %(method)s",
+      "code": 500,
+      "name": "AgentNotImplemented"
+    },
+    {
+      "msg": "Unable to contact guest agent. The following call timed out: %(method)s",
+      "code": 500,
+      "name": "AgentTimeout"
+    },
+    {
+      "msg": "Aggregate %(aggregate_id)s: action '%(action)s' caused an error: %(reason)s.",
+      "code": 500,
+      "name": "AggregateError"
+    },
+    {
+      "msg": "Aggregate %(aggregate_id)s already has host %(host)s.",
+      "code": 500,
+      "name": "AggregateHostExists"
+    },
+    {
+      "msg": "Aggregate %(aggregate_id)s has no host %(host)s.",
+      "code": 404,
+      "name": "AggregateHostNotFound"
+    },
+    {
+      "msg": "Aggregate %(aggregate_id)s has no metadata with key %(metadata_key)s.",
+      "code": 404,
+      "name": "AggregateMetadataNotFound"
+    },
+    {
+      "msg": "Aggregate %(aggregate_name)s already exists.",
+      "code": 500,
+      "name": "AggregateNameExists"
+    },
+    {
+      "msg": "Aggregate %(aggregate_id)s could not be found.",
+      "code": 404,
+      "name": "AggregateNotFound"
+    },
+    {
+      "msg": "Version of %(name)s %(min_ver)s %(max_ver)s intersects with another versions.",
+      "code": 400,
+      "name": "ApiVersionsIntersect"
+    },
+    {
+      "msg": "Attaching interfaces is not supported for instance %(instance)s.",
+      "code": 400,
+      "name": "AttachInterfaceNotSupported"
+    },
+    {
+      "msg": "Requested image %(image)s has automatic disk resize disabled.",
+      "code": 400,
+      "name": "AutoDiskConfigDisabledByImage"
+    },
+    {
+      "msg": "No Block Device Mapping with id %(id)s.",
+      "code": 404,
+      "name": "BDMNotFound"
+    },
+    {
+      "msg": "Invalid Base 64 data for file %(path)s",
+      "code": 500,
+      "name": "Base64Exception"
+    },
+    {
+      "msg": "Build of instance %(instance_uuid)s aborted: %(reason)s",
+      "code": 500,
+      "name": "BuildAbortException"
+    },
+    {
+      "msg": "BuildRequest not found for instance %(uuid)s",
+      "code": 404,
+      "name": "BuildRequestNotFound"
+    },
+    {
+      "msg": "CPU set to pin %(requested)s must be a subset of free CPU set %(free)s",
+      "code": 400,
+      "name": "CPUPinningInvalid"
+    },
+    {
+      "msg": "CPU pinning is not supported by the host: %(reason)s",
+      "code": 400,
+      "name": "CPUPinningNotSupported"
+    },
+    {
+      "msg": "CPU set to pin %(requested)s must be a subset of known CPU set %(cpuset)s",
+      "code": 400,
+      "name": "CPUPinningUnknown"
+    },
+    {
+      "msg": "Cannot set cpu thread pinning policy in a non dedicated cpu pinning policy",
+      "code": 400,
+      "name": "CPUThreadPolicyConfigurationInvalid"
+    },
+    {
+      "msg": "CPU set to unpin %(requested)s must be a subset of pinned CPU set %(pinned)s",
+      "code": 400,
+      "name": "CPUUnpinningInvalid"
+    },
+    {
+      "msg": "CPU set to unpin %(requested)s must be a subset of known CPU set %(cpuset)s",
+      "code": 400,
+      "name": "CPUUnpinningUnknown"
+    },
+    {
+      "msg": "Cannot disassociate auto assigned floating IP",
+      "code": 500,
+      "name": "CannotDisassociateAutoAssignedFloatingIP"
+    },
+    {
+      "msg": "Server disk was unable to be resized because: %(reason)s",
+      "code": 500,
+      "name": "CannotResizeDisk"
+    },
+    {
+      "msg": "When resizing, instances must change flavor!",
+      "code": 500,
+      "name": "CannotResizeToSameFlavor"
+    },
+    {
+      "msg": "Cell with name %(name)s already exists.",
+      "code": 500,
+      "name": "CellExists"
+    },
+    {
+      "msg": "Cell %(uuid)s has no mapping.",
+      "code": 404,
+      "name": "CellMappingNotFound"
+    },
+    {
+      "msg": "Cell message has reached maximum hop count: %(hop_count)s",
+      "code": 500,
+      "name": "CellMaxHopCountReached"
+    },
+    {
+      "msg": "Cell %(cell_name)s doesn't exist.",
+      "code": 404,
+      "name": "CellNotFound"
+    },
+    {
+      "msg": "Inconsistency in cell routing: %(reason)s",
+      "code": 500,
+      "name": "CellRoutingInconsistency"
+    },
+    {
+      "msg": "Service API method not found: %(detail)s",
+      "code": 404,
+      "name": "CellServiceAPIMethodNotFound"
+    },
+    {
+      "msg": "Timeout waiting for response from cell",
+      "code": 404,
+      "name": "CellTimeout"
+    },
+    {
+      "msg": "Cannot update cells configuration file.",
+      "code": 500,
+      "name": "CellsUpdateUnsupported"
+    },
+    {
+      "msg": "Requested cidr (%(cidr)s) conflicts with existing cidr (%(other)s)",
+      "code": 409,
+      "name": "CidrConflict"
+    },
+    {
+      "msg": "Connection to cinder host failed: %(reason)s",
+      "code": 500,
+      "name": "CinderConnectionFailed"
+    },
+    {
+      "msg": "Class %(class_name)s could not be found: %(exception)s",
+      "code": 404,
+      "name": "ClassNotFound"
+    },
+    {
+      "msg": "Metric %(name)s could not be found on the compute host node %(host)s.%(node)s.",
+      "code": 404,
+      "name": "ComputeHostMetricNotFound"
+    },
+    {
+      "msg": "Compute host %(name)s needs to be created first before updating.",
+      "code": 404,
+      "name": "ComputeHostNotCreated"
+    },
+    {
+      "msg": "Compute host %(host)s could not be found.",
+      "code": 404,
+      "name": "ComputeHostNotFound"
+    },
+    {
+      "msg": "Insufficient compute resources: %(reason)s.",
+      "code": 400,
+      "name": "ComputeResourcesUnavailable"
+    },
+    {
+      "msg": "Compute service of %(host)s is still in use.",
+      "code": 500,
+      "name": "ComputeServiceInUse"
+    },
+    {
+      "msg": "Compute service of %(host)s is unavailable at this time.",
+      "code": 400,
+      "name": "ComputeServiceUnavailable"
+    },
+    {
+      "msg": "Another thread concurrently updated the data. Please retry your update",
+      "code": 500,
+      "name": "ConcurrentUpdateDetected"
+    },
+    {
+      "msg": "Invalid value for Config Drive option: %(option)s",
+      "code": 400,
+      "name": "ConfigDriveInvalidValue"
+    },
+    {
+      "msg": "Could not mount vfat config drive. %(operation)s failed. Error: %(error)s",
+      "code": 500,
+      "name": "ConfigDriveMountFailed"
+    },
+    {
+      "msg": "Instance %(instance_uuid)s requires config drive, but it does not exist.",
+      "code": 404,
+      "name": "ConfigDriveNotFound"
+    },
+    {
+      "msg": "Unknown config drive format %(format)s. Select one of iso9660 or vfat.",
+      "code": 500,
+      "name": "ConfigDriveUnknownFormat"
+    },
+    {
+      "msg": "Config drive format '%(format)s' is not supported.",
+      "code": 400,
+      "name": "ConfigDriveUnsupportedFormat"
+    },
+    {
+      "msg": "Could not find config at %(path)s",
+      "code": 500,
+      "name": "ConfigNotFound"
+    },
+    {
+      "msg": "Console log output could not be retrieved for instance %(instance_id)s. Reason: %(reason)s",
+      "code": 500,
+      "name": "ConsoleLogOutputException"
+    },
+    {
+      "msg": "Guest does not have a console available.",
+      "code": 404,
+      "name": "ConsoleNotAvailable"
+    },
+    {
+      "msg": "Console %(console_id)s could not be found.",
+      "code": 404,
+      "name": "ConsoleNotFound"
+    },
+    {
+      "msg": "Console for instance %(instance_uuid)s could not be found.",
+      "code": 404,
+      "name": "ConsoleNotFoundForInstance"
+    },
+    {
+      "msg": "Console for instance %(instance_uuid)s in pool %(pool_id)s could not be found.",
+      "code": 404,
+      "name": "ConsoleNotFoundInPoolForInstance"
+    },
+    {
+      "msg": "Console pool with host %(host)s, console_type %(console_type)s and compute_host %(compute_host)s already exists.",
+      "code": 500,
+      "name": "ConsolePoolExists"
+    },
+    {
+      "msg": "Console pool %(pool_id)s could not be found.",
+      "code": 404,
+      "name": "ConsolePoolNotFound"
+    },
+    {
+      "msg": "Console pool of type %(console_type)s for compute host %(compute_host)s on proxy host %(host)s not found.",
+      "code": 404,
+      "name": "ConsolePoolNotFoundForHostType"
+    },
+    {
+      "msg": "The console port range %(min_port)d-%(max_port)d is exhausted.",
+      "code": 500,
+      "name": "ConsolePortRangeExhausted"
+    },
+    {
+      "msg": "Invalid console type %(console_type)s",
+      "code": 400,
+      "name": "ConsoleTypeInvalid"
+    },
+    {
+      "msg": "Unavailable console type %(console_type)s.",
+      "code": 400,
+      "name": "ConsoleTypeUnavailable"
+    },
+    {
+      "msg": "Constraint not met.",
+      "code": 412,
+      "name": "ConstraintNotMet"
+    },
+    {
+      "msg": "Core API extensions are missing: %(missing_apis)s",
+      "code": 500,
+      "name": "CoreAPIMissing"
+    },
+    {
+      "msg": "Could not fetch image %(image_id)s",
+      "code": 500,
+      "name": "CouldNotFetchImage"
+    },
+    {
+      "msg": "Could not upload image %(image_id)s",
+      "code": 500,
+      "name": "CouldNotUploadImage"
+    },
+    {
+      "msg": "The CA file for %(project)s could not be found",
+      "code": 404,
+      "name": "CryptoCAFileNotFound"
+    },
+    {
+      "msg": "The CRL file for %(project)s could not be found",
+      "code": 404,
+      "name": "CryptoCRLFileNotFound"
+    },
+    {
+      "msg": "%(binary)s attempted direct database access which is not allowed by policy",
+      "code": 500,
+      "name": "DBNotAllowed"
+    },
+    {
+      "msg": "Could not find the datastore reference(s) which the VM uses.",
+      "code": 404,
+      "name": "DatastoreNotFound"
+    },
+    {
+      "msg": "Failed to decrypt text: %(reason)s",
+      "code": 500,
+      "name": "DecryptionFailure"
+    },
+    {
+      "msg": "The supplied disk path (%(path)s) already exists, it is expected not to exist.",
+      "code": 400,
+      "name": "DestinationDiskExists"
+    },
+    {
+      "msg": "The instance requires a newer hypervisor version than has been provided.",
+      "code": 400,
+      "name": "DestinationHypervisorTooOld"
+    },
+    {
+      "msg": "Device detach failed for %(device)s: %(reason)s",
+      "code": 500,
+      "name": "DeviceDetachFailed"
+    },
+    {
+      "msg": "The supplied device (%(device)s) is busy.",
+      "code": 400,
+      "name": "DeviceIsBusy"
+    },
+    {
+      "msg": "Device '%(device)s' not found.",
+      "code": 404,
+      "name": "DeviceNotFound"
+    },
+    {
+      "msg": "The supplied device path (%(path)s) is in use.",
+      "code": 409,
+      "name": "DevicePathInUse"
+    },
+    {
+      "msg": "Failed to read or write disk info file: %(reason)s",
+      "code": 400,
+      "name": "DiskInfoReadWriteFail"
+    },
+    {
+      "msg": "No disk at %(location)s",
+      "code": 404,
+      "name": "DiskNotFound"
+    },
+    {
+      "msg": "Detected existing vlan with id %(vlan)d",
+      "code": 409,
+      "name": "DuplicateVlan"
+    },
+    {
+      "msg": "Failed to encrypt text: %(reason)s",
+      "code": 500,
+      "name": "EncryptionFailure"
+    },
+    {
+      "msg": "%(typename)s in %(fieldname)s is not an instance of Enum",
+      "code": 400,
+      "name": "EnumFieldInvalid"
+    },
+    {
+      "msg": "%(fieldname)s missing field type",
+      "code": 400,
+      "name": "EnumFieldUnset"
+    },
+    {
+      "msg": "It is not allowed to create an interface on external network %(network_uuid)s",
+      "code": 403,
+      "name": "ExternalNetworkAttachForbidden"
+    },
+    {
+      "msg": "File %(file_path)s could not be found.",
+      "code": 404,
+      "name": "FileNotFound"
+    },
+    {
+      "msg": "Fixed IP address %(address)s is already in use on instance %(instance_uuid)s.",
+      "code": 500,
+      "name": "FixedIpAlreadyInUse"
+    },
+    {
+      "msg": "Fixed IP associate failed for network: %(net)s.",
+      "code": 500,
+      "name": "FixedIpAssociateFailed"
+    },
+    {
+      "msg": "More than one instance is associated with fixed IP address '%(address)s'.",
+      "code": 500,
+      "name": "FixedIpAssociatedWithMultipleInstances"
+    },
+    {
+      "msg": "Fixed IP %(address)s already exists.",
+      "code": 500,
+      "name": "FixedIpExists"
+    },
+    {
+      "msg": "Fixed IP address %(address)s is invalid.",
+      "code": 400,
+      "name": "FixedIpInvalid"
+    },
+    {
+      "msg": "The fixed IP associated with port %(port_id)s is not compatible with the host.",
+      "code": 400,
+      "name": "FixedIpInvalidOnHost"
+    },
+    {
+      "msg": "Maximum number of fixed IPs exceeded",
+      "code": 413,
+      "name": "FixedIpLimitExceeded"
+    },
+    {
+      "msg": "No fixed IP associated with id %(id)s.",
+      "code": 404,
+      "name": "FixedIpNotFound"
+    },
+    {
+      "msg": "Fixed IP not found for address %(address)s.",
+      "code": 404,
+      "name": "FixedIpNotFoundForAddress"
+    },
+    {
+      "msg": "Instance %(instance_uuid)s has zero fixed IPs.",
+      "code": 404,
+      "name": "FixedIpNotFoundForInstance"
+    },
+    {
+      "msg": "Fixed IP address (%(address)s) does not exist in network (%(network_uuid)s).",
+      "code": 404,
+      "name": "FixedIpNotFoundForNetwork"
+    },
+    {
+      "msg": "Network host %(host)s has zero fixed IPs in network %(network_id)s.",
+      "code": 404,
+      "name": "FixedIpNotFoundForNetworkHost"
+    },
+    {
+      "msg": "Instance %(instance_uuid)s doesn't have fixed IP '%(ip)s'.",
+      "code": 404,
+      "name": "FixedIpNotFoundForSpecificInstance"
+    },
+    {
+      "msg": "Flavor access already exists for flavor %(flavor_id)s and project %(project_id)s combination.",
+      "code": 500,
+      "name": "FlavorAccessExists"
+    },
+    {
+      "msg": "Flavor access not found for %(flavor_id)s / %(project_id)s combination.",
+      "code": 404,
+      "name": "FlavorAccessNotFound"
+    },
+    {
+      "msg": "Flavor's disk is too small for requested image. Flavor disk is %(flavor_size)i bytes, image is %(image_size)i bytes.",
+      "code": 500,
+      "name": "FlavorDiskSmallerThanImage"
+    },
+    {
+      "msg": "Flavor's disk is smaller than the minimum size specified in image metadata. Flavor disk is %(flavor_size)i bytes, minimum size is %(image_min_disk)i bytes.",
+      "code": 500,
+      "name": "FlavorDiskSmallerThanMinDisk"
+    },
+    {
+      "msg": "The created instance's disk would be too small.",
+      "code": 500,
+      "name": "FlavorDiskTooSmall"
+    },
+    {
+      "msg": "Flavor with name %(name)s already exists.",
+      "code": 500,
+      "name": "FlavorExists"
+    },
+    {
+      "msg": "Flavor %(id)s extra spec cannot be updated or created after %(retries)d retries.",
+      "code": 500,
+      "name": "FlavorExtraSpecUpdateCreateFailed"
+    },
+    {
+      "msg": "Flavor %(flavor_id)s has no extra specs with key %(extra_specs_key)s.",
+      "code": 404,
+      "name": "FlavorExtraSpecsNotFound"
+    },
+    {
+      "msg": "Flavor with ID %(flavor_id)s already exists.",
+      "code": 500,
+      "name": "FlavorIdExists"
+    },
+    {
+      "msg": "Flavor's memory is too small for requested image.",
+      "code": 500,
+      "name": "FlavorMemoryTooSmall"
+    },
+    {
+      "msg": "Flavor %(flavor_id)s could not be found.",
+      "code": 404,
+      "name": "FlavorNotFound"
+    },
+    {
+      "msg": "Flavor with name %(flavor_name)s could not be found.",
+      "code": 404,
+      "name": "FlavorNotFoundByName"
+    },
+    {
+      "msg": "Floating IP allocate failed.",
+      "code": 500,
+      "name": "FloatingIpAllocateFailed"
+    },
+    {
+      "msg": "Floating IP %(address)s association has failed.",
+      "code": 500,
+      "name": "FloatingIpAssociateFailed"
+    },
+    {
+      "msg": "Floating IP %(address)s is associated.",
+      "code": 500,
+      "name": "FloatingIpAssociated"
+    },
+    {
+      "msg": "The floating IP request failed with a BadRequest",
+      "code": 400,
+      "name": "FloatingIpBadRequest"
+    },
+    {
+      "msg": "The DNS entry %(name)s already exists in domain %(domain)s.",
+      "code": 400,
+      "name": "FloatingIpDNSExists"
+    },
+    {
+      "msg": "Floating IP %(address)s already exists.",
+      "code": 500,
+      "name": "FloatingIpExists"
+    },
+    {
+      "msg": "Maximum number of floating IPs exceeded",
+      "code": 413,
+      "name": "FloatingIpLimitExceeded"
+    },
+    {
+      "msg": "Multiple floating IPs are found for address %(address)s.",
+      "code": 500,
+      "name": "FloatingIpMultipleFoundForAddress"
+    },
+    {
+      "msg": "Floating IP %(address)s is not associated.",
+      "code": 500,
+      "name": "FloatingIpNotAssociated"
+    },
+    {
+      "msg": "Floating IP not found for ID %(id)s.",
+      "code": 404,
+      "name": "FloatingIpNotFound"
+    },
+    {
+      "msg": "Floating IP not found for address %(address)s.",
+      "code": 404,
+      "name": "FloatingIpNotFoundForAddress"
+    },
+    {
+      "msg": "Floating IP not found for host %(host)s.",
+      "code": 404,
+      "name": "FloatingIpNotFoundForHost"
+    },
+    {
+      "msg": "Floating IP pool not found.",
+      "code": 404,
+      "name": "FloatingIpPoolNotFound"
+    },
+    {
+      "msg": "Forbidden",
+      "code": 403,
+      "name": "Forbidden"
+    },
+    {
+      "msg": "Connection to glance host %(server)s failed: %(reason)s",
+      "code": 500,
+      "name": "GlanceConnectionFailed"
+    },
+    {
+      "msg": "Could not find binary %(binary)s on host %(host)s.",
+      "code": 404,
+      "name": "HostBinaryNotFound"
+    },
+    {
+      "msg": "Host '%(name)s' is not mapped to any cell",
+      "code": 400,
+      "name": "HostMappingNotFound"
+    },
+    {
+      "msg": "Host %(host)s could not be found.",
+      "code": 404,
+      "name": "HostNotFound"
+    },
+    {
+      "msg": "This compute node's hypervisor is older than the minimum supported version: %(version)s.",
+      "code": 400,
+      "name": "HypervisorTooOld"
+    },
+    {
+      "msg": "Connection to the hypervisor is broken on host: %(host)s",
+      "code": 500,
+      "name": "HypervisorUnavailable"
+    },
+    {
+      "msg": "Request of image %(image_id)s got BadRequest response: %(response)s",
+      "code": 400,
+      "name": "ImageBadRequest"
+    },
+    {
+      "msg": "Image property 'hw_cpu_policy' is not permitted to override CPU pinning policy set against the flavor",
+      "code": 403,
+      "name": "ImageCPUPinningForbidden"
+    },
+    {
+      "msg": "Image property 'hw_cpu_thread_policy' is not permitted to override CPU thread pinning policy set against the flavor",
+      "code": 403,
+      "name": "ImageCPUThreadPolicyForbidden"
+    },
+    {
+      "msg": "The module %(module)s is misconfigured: %(reason)s.",
+      "code": 500,
+      "name": "ImageDownloadModuleConfigurationError"
+    },
+    {
+      "msg": "There was an error with the download module %(module)s. %(reason)s",
+      "code": 500,
+      "name": "ImageDownloadModuleError"
+    },
+    {
+      "msg": "The metadata for this location will not work with this module %(module)s.  %(reason)s.",
+      "code": 500,
+      "name": "ImageDownloadModuleMetaDataError"
+    },
+    {
+      "msg": "The method %(method_name)s is not implemented.",
+      "code": 500,
+      "name": "ImageDownloadModuleNotImplementedError"
+    },
+    {
+      "msg": "Asymmetric NUMA topologies require explicit assignment of CPUs and memory to nodes in image or flavor",
+      "code": 400,
+      "name": "ImageNUMATopologyAsymmetric"
+    },
+    {
+      "msg": "CPU number %(cpunum)d is assigned to two nodes",
+      "code": 400,
+      "name": "ImageNUMATopologyCPUDuplicates"
+    },
+    {
+      "msg": "CPU number %(cpunum)d is larger than max %(cpumax)d",
+      "code": 400,
+      "name": "ImageNUMATopologyCPUOutOfRange"
+    },
+    {
+      "msg": "CPU number %(cpuset)s is not assigned to any node",
+      "code": 400,
+      "name": "ImageNUMATopologyCPUsUnassigned"
+    },
+    {
+      "msg": "Image property '%(name)s' is not permitted to override NUMA configuration set against the flavor",
+      "code": 403,
+      "name": "ImageNUMATopologyForbidden"
+    },
+    {
+      "msg": "CPU and memory allocation must be provided for all NUMA nodes",
+      "code": 400,
+      "name": "ImageNUMATopologyIncomplete"
+    },
+    {
+      "msg": "%(memsize)d MB of memory assigned, but expected %(memtotal)d MB",
+      "code": 400,
+      "name": "ImageNUMATopologyMemoryOutOfRange"
+    },
+    {
+      "msg": "Image %(image_id)s is not active.",
+      "code": 500,
+      "name": "ImageNotActive"
+    },
+    {
+      "msg": "Not authorized for image %(image_id)s.",
+      "code": 500,
+      "name": "ImageNotAuthorized"
+    },
+    {
+      "msg": "Image %(image_id)s could not be found.",
+      "code": 404,
+      "name": "ImageNotFound"
+    },
+    {
+      "msg": "Forbidden to exceed flavor value of number of serial ports passed in image meta.",
+      "code": 400,
+      "name": "ImageSerialPortNumberExceedFlavorValue"
+    },
+    {
+      "msg": "Number of serial ports '%(num_ports)s' specified in '%(property)s' isn't valid.",
+      "code": 400,
+      "name": "ImageSerialPortNumberInvalid"
+    },
+    {
+      "msg": "Image %(image_id)s is unacceptable: %(reason)s",
+      "code": 400,
+      "name": "ImageUnacceptable"
+    },
+    {
+      "msg": "Image vCPU limits %(sockets)d:%(cores)d:%(threads)d exceeds permitted %(maxsockets)d:%(maxcores)d:%(maxthreads)d",
+      "code": 400,
+      "name": "ImageVCPULimitsRangeExceeded"
+    },
+    {
+      "msg": "Requested vCPU limits %(sockets)d:%(cores)d:%(threads)d are impossible to satisfy for vcpus count %(vcpus)d",
+      "code": 400,
+      "name": "ImageVCPULimitsRangeImpossible"
+    },
+    {
+      "msg": "Image vCPU topology %(sockets)d:%(cores)d:%(threads)d exceeds permitted %(maxsockets)d:%(maxcores)d:%(maxthreads)d",
+      "code": 400,
+      "name": "ImageVCPUTopologyRangeExceeded"
+    },
+    {
+      "msg": "Event %(event)s not found for action id %(action_id)s",
+      "code": 500,
+      "name": "InstanceActionEventNotFound"
+    },
+    {
+      "msg": "Action for request_id %(request_id)s on instance %(instance_uuid)s not found",
+      "code": 500,
+      "name": "InstanceActionNotFound"
+    },
+    {
+      "msg": "Guest agent is not enabled for the instance",
+      "code": 400,
+      "name": "InstanceAgentNotEnabled"
+    },
+    {
+      "msg": "Failed to deploy instance: %(reason)s",
+      "code": 400,
+      "name": "InstanceDeployFailure"
+    },
+    {
+      "msg": "Instance %(name)s already exists.",
+      "code": 500,
+      "name": "InstanceExists"
+    },
+    {
+      "msg": "An unknown exception occurred.",
+      "code": 500,
+      "name": "InstanceFaultRollback"
+    },
+    {
+      "msg": "Instance group %(group_uuid)s already exists.",
+      "code": 500,
+      "name": "InstanceGroupIdExists"
+    },
+    {
+      "msg": "Instance group %(group_uuid)s has no member with id %(instance_id)s.",
+      "code": 404,
+      "name": "InstanceGroupMemberNotFound"
+    },
+    {
+      "msg": "Instance group %(group_uuid)s could not be found.",
+      "code": 404,
+      "name": "InstanceGroupNotFound"
+    },
+    {
+      "msg": "Instance group %(group_uuid)s has no policy %(policy)s.",
+      "code": 404,
+      "name": "InstanceGroupPolicyNotFound"
+    },
+    {
+      "msg": "%(field)s should not be part of the updates.",
+      "code": 500,
+      "name": "InstanceGroupSaveException"
+    },
+    {
+      "msg": "Info cache for instance %(instance_uuid)s could not be found.",
+      "code": 404,
+      "name": "InstanceInfoCacheNotFound"
+    },
+    {
+      "msg": "Instance %(instance_uuid)s in %(attr)s %(state)s. Cannot %(method)s while the instance is in this state.",
+      "code": 400,
+      "name": "InstanceInvalidState"
+    },
+    {
+      "msg": "Instance %(instance_uuid)s is locked",
+      "code": 400,
+      "name": "InstanceIsLocked"
+    },
+    {
+      "msg": "Instance %(uuid)s has no mapping to a cell.",
+      "code": 404,
+      "name": "InstanceMappingNotFound"
+    },
+    {
+      "msg": "Instance %(instance_id)s could not be found.",
+      "code": 404,
+      "name": "InstanceNotFound"
+    },
+    {
+      "msg": "Instance %(instance_id)s is not in rescue mode",
+      "code": 400,
+      "name": "InstanceNotInRescueMode"
+    },
+    {
+      "msg": "Instance %(instance_id)s is not ready",
+      "code": 400,
+      "name": "InstanceNotReady"
+    },
+    {
+      "msg": "Instance %(instance_id)s cannot be rescued: %(reason)s",
+      "code": 400,
+      "name": "InstanceNotRescuable"
+    },
+    {
+      "msg": "Instance %(instance_id)s is not running.",
+      "code": 400,
+      "name": "InstanceNotRunning"
+    },
+    {
+      "msg": "Failed to set admin password on %(instance)s because %(reason)s",
+      "code": 500,
+      "name": "InstancePasswordSetFailed"
+    },
+    {
+      "msg": "Failed to power off instance: %(reason)s",
+      "code": 400,
+      "name": "InstancePowerOffFailure"
+    },
+    {
+      "msg": "Failed to power on instance: %(reason)s",
+      "code": 400,
+      "name": "InstancePowerOnFailure"
+    },
+    {
+      "msg": "Quiescing is not supported in instance %(instance_id)s",
+      "code": 400,
+      "name": "InstanceQuiesceNotSupported"
+    },
+    {
+      "msg": "Failed to reboot instance: %(reason)s",
+      "code": 400,
+      "name": "InstanceRebootFailure"
+    },
+    {
+      "msg": "Instance recreate is not supported.",
+      "code": 400,
+      "name": "InstanceRecreateNotSupported"
+    },
+    {
+      "msg": "Failed to resume instance: %(reason)s",
+      "code": 400,
+      "name": "InstanceResumeFailure"
+    },
+    {
+      "msg": "Failed to suspend instance: %(reason)s",
+      "code": 400,
+      "name": "InstanceSuspendFailure"
+    },
+    {
+      "msg": "Instance %(instance_id)s has no tag '%(tag)s'",
+      "code": 404,
+      "name": "InstanceTagNotFound"
+    },
+    {
+      "msg": "Failed to terminate instance: %(reason)s",
+      "code": 400,
+      "name": "InstanceTerminationFailure"
+    },
+    {
+      "msg": "Instance %(instance_id)s is unacceptable: %(reason)s",
+      "code": 400,
+      "name": "InstanceUnacceptable"
+    },
+    {
+      "msg": "Cell is not known for instance %(instance_uuid)s",
+      "code": 404,
+      "name": "InstanceUnknownCell"
+    },
+    {
+      "msg": "Conflict updating instance %(instance_uuid)s. Expected: %(expected)s. Actual: %(actual)s",
+      "code": 500,
+      "name": "InstanceUpdateConflict"
+    },
+    {
+      "msg": "User data needs to be valid base 64.",
+      "code": 500,
+      "name": "InstanceUserDataMalformed"
+    },
+    {
+      "msg": "User data too large. User data must be no larger than %(maxsize)s bytes once base64 encoded. Your data is %(length)d bytes",
+      "code": 500,
+      "name": "InstanceUserDataTooLarge"
+    },
+    {
+      "msg": "Insufficient free memory on compute node to start %(uuid)s.",
+      "code": 500,
+      "name": "InsufficientFreeMemory"
+    },
+    {
+      "msg": "Failed to attach network adapter device to %(instance_uuid)s",
+      "code": 400,
+      "name": "InterfaceAttachFailed"
+    },
+    {
+      "msg": "No specific network was requested and none are available for project '%(project_id)s'.",
+      "code": 400,
+      "name": "InterfaceAttachFailedNoNetwork"
+    },
+    {
+      "msg": "Failed to detach network adapter device from %(instance_uuid)s",
+      "code": 400,
+      "name": "InterfaceDetachFailed"
+    },
+    {
+      "msg": "%(err)s",
+      "code": 500,
+      "name": "InternalError"
+    },
+    {
+      "msg": "Bad Request - Invalid Parameters",
+      "code": 400,
+      "name": "Invalid"
+    },
+    {
+      "msg": "API Version String %(version)s is of invalid format. Must be of format MajorNum.MinorNum.",
+      "code": 400,
+      "name": "InvalidAPIVersionString"
+    },
+    {
+      "msg": "%(address)s is not a valid IP address.",
+      "code": 400,
+      "name": "InvalidAddress"
+    },
+    {
+      "msg": "Unacceptable parameters.",
+      "code": 400,
+      "name": "InvalidAggregateAction"
+    },
+    {
+      "msg": "Cannot add host to aggregate %(aggregate_id)s. Reason: %(reason)s.",
+      "code": 400,
+      "name": "InvalidAggregateActionAdd"
+    },
+    {
+      "msg": "Cannot remove host from aggregate %(aggregate_id)s. Reason: %(reason)s.",
+      "code": 400,
+      "name": "InvalidAggregateActionDelete"
+    },
+    {
+      "msg": "Cannot update aggregate %(aggregate_id)s. Reason: %(reason)s.",
+      "code": 400,
+      "name": "InvalidAggregateActionUpdate"
+    },
+    {
+      "msg": "Cannot update metadata of aggregate %(aggregate_id)s. Reason: %(reason)s.",
+      "code": 400,
+      "name": "InvalidAggregateActionUpdateMeta"
+    },
+    {
+      "msg": "Architecture name '%(arch)s' is not recognised",
+      "code": 400,
+      "name": "InvalidArchitectureName"
+    },
+    {
+      "msg": "Invalid association.",
+      "code": 404,
+      "name": "InvalidAssociation"
+    },
+    {
+      "msg": "Attribute not supported: %(attr)s",
+      "code": 400,
+      "name": "InvalidAttribute"
+    },
+    {
+      "msg": "Block Device Mapping is Invalid.",
+      "code": 400,
+      "name": "InvalidBDM"
+    },
+    {
+      "msg": "Block Device Mapping is Invalid: Boot sequence for the instance and image/block device mapping combination is not valid.",
+      "code": 400,
+      "name": "InvalidBDMBootSequence"
+    },
+    {
+      "msg": "Ephemeral disks requested are larger than the instance type allows. If no size is given in one block device mapping, flavor ephemeral size will be used.",
+      "code": 400,
+      "name": "InvalidBDMEphemeralSize"
+    },
+    {
+      "msg": "Block Device Mapping cannot be converted to legacy format. ",
+      "code": 400,
+      "name": "InvalidBDMForLegacy"
+    },
+    {
+      "msg": "Block Device Mapping is Invalid: %(details)s",
+      "code": 400,
+      "name": "InvalidBDMFormat"
+    },
+    {
+      "msg": "Block Device Mapping is Invalid: failed to get image %(id)s.",
+      "code": 400,
+      "name": "InvalidBDMImage"
+    },
+    {
+      "msg": "Block Device Mapping is Invalid: You specified more local devices than the limit allows",
+      "code": 400,
+      "name": "InvalidBDMLocalsLimit"
+    },
+    {
+      "msg": "Block Device Mapping is Invalid: failed to get snapshot %(id)s.",
+      "code": 400,
+      "name": "InvalidBDMSnapshot"
+    },
+    {
+      "msg": "Swap drive requested is larger than instance type allows.",
+      "code": 400,
+      "name": "InvalidBDMSwapSize"
+    },
+    {
+      "msg": "Block Device Mapping is Invalid: failed to get volume %(id)s.",
+      "code": 400,
+      "name": "InvalidBDMVolume"
+    },
+    {
+      "msg": "Block Device %(id)s is not bootable.",
+      "code": 400,
+      "name": "InvalidBDMVolumeNotBootable"
+    },
+    {
+      "msg": "Unacceptable CPU info: %(reason)s",
+      "code": 400,
+      "name": "InvalidCPUInfo"
+    },
+    {
+      "msg": "%(cidr)s is not a valid IP network.",
+      "code": 400,
+      "name": "InvalidCidr"
+    },
+    {
+      "msg": "Invalid Connection Info",
+      "code": 400,
+      "name": "InvalidConnectionInfo"
+    },
+    {
+      "msg": "Invalid content type %(content_type)s.",
+      "code": 400,
+      "name": "InvalidContentType"
+    },
+    {
+      "msg": "The supplied device path (%(path)s) is invalid.",
+      "code": 400,
+      "name": "InvalidDevicePath"
+    },
+    {
+      "msg": "Disk format %(disk_format)s is not acceptable",
+      "code": 400,
+      "name": "InvalidDiskFormat"
+    },
+    {
+      "msg": "Disk info file is invalid: %(reason)s",
+      "code": 400,
+      "name": "InvalidDiskInfo"
+    },
+    {
+      "msg": "Ec2 id %(ec2_id)s is unacceptable.",
+      "code": 400,
+      "name": "InvalidEc2Id"
+    },
+    {
+      "msg": "Failed to launch instances: %(reason)s",
+      "code": 400,
+      "name": "InvalidFixedIpAndMaxCountRequest"
+    },
+    {
+      "msg": "Version %(req_ver)s is not supported by the API. Minimum is %(min_ver)s and maximum is %(max_ver)s.",
+      "code": 400,
+      "name": "InvalidGlobalAPIVersion"
+    },
+    {
+      "msg": "Group not valid. Reason: %(reason)s",
+      "code": 400,
+      "name": "InvalidGroup"
+    },
+    {
+      "msg": "Invalid characters in hostname '%(hostname)s'",
+      "code": 400,
+      "name": "InvalidHostname"
+    },
+    {
+      "msg": "The supplied hypervisor type of is invalid.",
+      "code": 400,
+      "name": "InvalidHypervisorType"
+    },
+    {
+      "msg": "Hypervisor virtualization type '%(hv_type)s' is not recognised",
+      "code": 400,
+      "name": "InvalidHypervisorVirtType"
+    },
+    {
+      "msg": "Invalid ID received %(id)s.",
+      "code": 400,
+      "name": "InvalidID"
+    },
+    {
+      "msg": "Image's config drive option '%(config_drive)s' is invalid",
+      "code": 400,
+      "name": "InvalidImageConfigDrive"
+    },
+    {
+      "msg": "Invalid image format '%(format)s'",
+      "code": 400,
+      "name": "InvalidImageFormat"
+    },
+    {
+      "msg": "Invalid image href %(image_href)s.",
+      "code": 400,
+      "name": "InvalidImageRef"
+    },
+    {
+      "msg": "Invalid input received: %(reason)s",
+      "code": 400,
+      "name": "InvalidInput"
+    },
+    {
+      "msg": "Invalid id: %(instance_id)s (expecting \"i-...\")",
+      "code": 400,
+      "name": "InvalidInstanceIDMalformed"
+    },
+    {
+      "msg": "%(key)s must be an integer.",
+      "code": 400,
+      "name": "InvalidIntValue"
+    },
+    {
+      "msg": "Inventory for '%(resource_class)s' on resource provider '%(resource_provider)s' invalid.",
+      "code": 400,
+      "name": "InvalidInventory"
+    },
+    {
+      "msg": "Invalid inventory for '%(resource_class)s' on resource provider '%(resource_provider)s'. The reserved value is greater than or equal to total.",
+      "code": 400,
+      "name": "InvalidInventoryCapacity"
+    },
+    {
+      "msg": "Invalid inventory for '%(resource_class)s' on resource provider '%(resource_provider)s'. The new total minus reserved amount is less than the existing used amount.",
+      "code": 400,
+      "name": "InvalidInventoryNewCapacityExceeded"
+    },
+    {
+      "msg": "%(address)s is not a valid IP v4/6 address.",
+      "code": 400,
+      "name": "InvalidIpAddressError"
+    },
+    {
+      "msg": "Invalid IP protocol %(protocol)s.",
+      "code": 400,
+      "name": "InvalidIpProtocol"
+    },
+    {
+      "msg": "Keypair data is invalid: %(reason)s",
+      "code": 400,
+      "name": "InvalidKeypair"
+    },
+    {
+      "msg": "%(path)s is not on local storage: %(reason)s",
+      "code": 500,
+      "name": "InvalidLocalStorage"
+    },
+    {
+      "msg": "Invalid metadata: %(reason)s",
+      "code": 400,
+      "name": "InvalidMetadata"
+    },
+    {
+      "msg": "Invalid metadata size: %(reason)s",
+      "code": 400,
+      "name": "InvalidMetadataSize"
+    },
+    {
+      "msg": "Migration %(migration_id)s state of instance %(instance_uuid)s is %(state)s. Cannot %(method)s while the migration is in this state.",
+      "code": 400,
+      "name": "InvalidMigrationState"
+    },
+    {
+      "msg": "An invalid 'name' value was provided. The name must be: %(reason)s",
+      "code": 400,
+      "name": "InvalidName"
+    },
+    {
+      "msg": "%(err)s",
+      "code": 400,
+      "name": "InvalidParameterValue"
+    },
+    {
+      "msg": "Invalid port range %(from_port)s:%(to_port)s. %(msg)s",
+      "code": 400,
+      "name": "InvalidPortRange"
+    },
+    {
+      "msg": "Wrong quota method %(method)s used on resource %(res)s",
+      "code": 400,
+      "name": "InvalidQuotaMethodUsage"
+    },
+    {
+      "msg": "Change would make usage less than 0 for the following resources: %(unders)s",
+      "code": 400,
+      "name": "InvalidQuotaValue"
+    },
+    {
+      "msg": "The request is invalid.",
+      "code": 400,
+      "name": "InvalidRequest"
+    },
+    {
+      "msg": "Invalid reservation expiration %(expire)s.",
+      "code": 400,
+      "name": "InvalidReservationExpiration"
+    },
+    {
+      "msg": "The format of the option 'reserved_huge_pages' is invalid. (found '%(conf)s') Please refer to the nova config-reference.",
+      "code": 400,
+      "name": "InvalidReservedMemoryPagesOption"
+    },
+    {
+      "msg": "%(path)s is not on shared storage: %(reason)s",
+      "code": 500,
+      "name": "InvalidSharedStorage"
+    },
+    {
+      "msg": "Sort key supplied was not valid.",
+      "code": 400,
+      "name": "InvalidSortKey"
+    },
+    {
+      "msg": "Invalid datetime string: %(reason)s",
+      "code": 400,
+      "name": "InvalidStrTime"
+    },
+    {
+      "msg": "The token '%(token)s' is invalid or has expired",
+      "code": 400,
+      "name": "InvalidToken"
+    },
+    {
+      "msg": "Expected a uuid but received %(uuid)s.",
+      "code": 400,
+      "name": "InvalidUUID"
+    },
+    {
+      "msg": "vSwitch which contains the port group %(bridge)s is not associated with the desired physical adapter. Expected vSwitch is %(expected)s, but the one associated is %(actual)s.",
+      "code": 400,
+      "name": "InvalidVLANPortGroup"
+    },
+    {
+      "msg": "VLAN tag is not appropriate for the port group %(bridge)s. Expected VLAN tag is %(tag)s, but the one associated with the port group is %(pgroup)s.",
+      "code": 400,
+      "name": "InvalidVLANTag"
+    },
+    {
+      "msg": "Provided video model (%(model)s) is not supported.",
+      "code": 400,
+      "name": "InvalidVideoMode"
+    },
+    {
+      "msg": "Virtual machine mode '%(vmmode)s' is not recognised",
+      "code": 400,
+      "name": "InvalidVirtualMachineMode"
+    },
+    {
+      "msg": "Invalid volume: %(reason)s",
+      "code": 400,
+      "name": "InvalidVolume"
+    },
+    {
+      "msg": "Invalid volume access mode: %(access_mode)s",
+      "code": 400,
+      "name": "InvalidVolumeAccessMode"
+    },
+    {
+      "msg": "Invalid id: %(volume_id)s (expecting \"i-...\")",
+      "code": 400,
+      "name": "InvalidVolumeIDMalformed"
+    },
+    {
+      "msg": "Provided watchdog action (%(action)s) is not supported.",
+      "code": 400,
+      "name": "InvalidWatchdogAction"
+    },
+    {
+      "msg": "Inventory for '%(resource_classes)s' on resource provider '%(resource_provider)s' in use.",
+      "code": 400,
+      "name": "InventoryInUse"
+    },
+    {
+      "msg": "Key manager error: %(reason)s",
+      "code": 500,
+      "name": "KeyManagerError"
+    },
+    {
+      "msg": "Key pair '%(key_name)s' already exists.",
+      "code": 500,
+      "name": "KeyPairExists"
+    },
+    {
+      "msg": "Maximum number of key pairs exceeded",
+      "code": 413,
+      "name": "KeypairLimitExceeded"
+    },
+    {
+      "msg": "Keypair %(name)s not found for user %(user_id)s",
+      "code": 404,
+      "name": "KeypairNotFound"
+    },
+    {
+      "msg": "Maximum allowed length for 'label' is 255.",
+      "code": 400,
+      "name": "LabelTooLong"
+    },
+    {
+      "msg": "Libguestfs does not have permission to read host kernel.",
+      "code": 400,
+      "name": "LibguestfsCannotReadKernel"
+    },
+    {
+      "msg": "No live migration URI configured and no default available for \"%(virt_type)s\" hypervisor virtualization type.",
+      "code": 500,
+      "name": "LiveMigrationURINotAvailable"
+    },
+    {
+      "msg": "Live migration with API v2.25 requires all the Mitaka upgrade to be complete before it is available.",
+      "code": 500,
+      "name": "LiveMigrationWithOldNovaNotSupported"
+    },
+    {
+      "msg": "Malformed message body: %(reason)s",
+      "code": 500,
+      "name": "MalformedRequestBody"
+    },
+    {
+      "msg": "Marker %(marker)s could not be found.",
+      "code": 404,
+      "name": "MarkerNotFound"
+    },
+    {
+      "msg": "Exceeded maximum number of retries. %(reason)s",
+      "code": 500,
+      "name": "MaxRetriesExceeded"
+    },
+    {
+      "msg": "Page size %(pagesize)s forbidden against '%(against)s'",
+      "code": 400,
+      "name": "MemoryPageSizeForbidden"
+    },
+    {
+      "msg": "Invalid memory page size '%(pagesize)s'",
+      "code": 400,
+      "name": "MemoryPageSizeInvalid"
+    },
+    {
+      "msg": "Page size %(pagesize)s is not supported by the host.",
+      "code": 400,
+      "name": "MemoryPageSizeNotSupported"
+    },
+    {
+      "msg": "Host does not support guests with custom memory page sizes",
+      "code": 400,
+      "name": "MemoryPagesUnsupported"
+    },
+    {
+      "msg": "Maximum number of metadata items exceeds %(allowed)d",
+      "code": 413,
+      "name": "MetadataLimitExceeded"
+    },
+    {
+      "msg": "Instance %(instance_uuid)s does not specify a migration context.",
+      "code": 404,
+      "name": "MigrationContextNotFound"
+    },
+    {
+      "msg": "Migration error: %(reason)s",
+      "code": 500,
+      "name": "MigrationError"
+    },
+    {
+      "msg": "Migration %(migration_id)s could not be found.",
+      "code": 404,
+      "name": "MigrationNotFound"
+    },
+    {
+      "msg": "Migration not found for instance %(instance_id)s with status %(status)s.",
+      "code": 404,
+      "name": "MigrationNotFoundByStatus"
+    },
+    {
+      "msg": "Migration %(migration_id)s not found for instance %(instance_id)s",
+      "code": 404,
+      "name": "MigrationNotFoundForInstance"
+    },
+    {
+      "msg": "Client exception during Migration Pre check: %(reason)s",
+      "code": 500,
+      "name": "MigrationPreCheckClientException"
+    },
+    {
+      "msg": "Migration pre-check error: %(reason)s",
+      "code": 500,
+      "name": "MigrationPreCheckError"
+    },
+    {
+      "msg": "Migration select destinations error: %(reason)s",
+      "code": 500,
+      "name": "MigrationSchedulerRPCError"
+    },
+    {
+      "msg": "Not enough parameters: %(reason)s",
+      "code": 400,
+      "name": "MissingParameter"
+    },
+    {
+      "msg": "Failed to launch instances: %(reason)s",
+      "code": 400,
+      "name": "MultiplePortsNotApplicable"
+    },
+    {
+      "msg": "Host does not support guests with NUMA topology set",
+      "code": 400,
+      "name": "NUMATopologyUnsupported"
+    },
+    {
+      "msg": "Network adapter %(adapter)s could not be found.",
+      "code": 404,
+      "name": "NetworkAdapterNotFound"
+    },
+    {
+      "msg": "More than one possible network found. Specify network ID(s) to select which one(s) to connect to.",
+      "code": 400,
+      "name": "NetworkAmbiguous"
+    },
+    {
+      "msg": "Failed to release IP %(address)s with MAC %(mac_address)s",
+      "code": 500,
+      "name": "NetworkDhcpReleaseFailed"
+    },
+    {
+      "msg": "Network %(network_id)s is duplicated.",
+      "code": 400,
+      "name": "NetworkDuplicated"
+    },
+    {
+      "msg": "Network must be disassociated from project %(project_id)s before it can be deleted.",
+      "code": 500,
+      "name": "NetworkHasProject"
+    },
+    {
+      "msg": "Network %(network_id)s is still in use.",
+      "code": 500,
+      "name": "NetworkInUse"
+    },
+    {
+      "msg": "Physical network is missing for network %(network_uuid)s",
+      "code": 500,
+      "name": "NetworkMissingPhysicalNetwork"
+    },
+    {
+      "msg": "%(req)s is required to create a network.",
+      "code": 400,
+      "name": "NetworkNotCreated"
+    },
+    {
+      "msg": "Network %(network_id)s could not be found.",
+      "code": 404,
+      "name": "NetworkNotFound"
+    },
+    {
+      "msg": "Network could not be found for bridge %(bridge)s",
+      "code": 404,
+      "name": "NetworkNotFoundForBridge"
+    },
+    {
+      "msg": "Network could not be found with cidr %(cidr)s.",
+      "code": 404,
+      "name": "NetworkNotFoundForCidr"
+    },
+    {
+      "msg": "Network could not be found for instance %(instance_id)s.",
+      "code": 404,
+      "name": "NetworkNotFoundForInstance"
+    },
+    {
+      "msg": "Either network uuid %(network_uuid)s is not present or is not assigned to the project %(project_id)s.",
+      "code": 404,
+      "name": "NetworkNotFoundForProject"
+    },
+    {
+      "msg": "Network could not be found for uuid %(uuid)s",
+      "code": 404,
+      "name": "NetworkNotFoundForUUID"
+    },
+    {
+      "msg": "Network %(network_uuid)s requires a subnet in order to boot instances on.",
+      "code": 400,
+      "name": "NetworkRequiresSubnet"
+    },
+    {
+      "msg": "Network set host failed for network %(network_id)s.",
+      "code": 500,
+      "name": "NetworkSetHostFailed"
+    },
+    {
+      "msg": "Networking client is experiencing an unauthorized exception.",
+      "code": 400,
+      "name": "NeutronAdminCredentialConfigurationInvalid"
+    },
+    {
+      "msg": "Active live migration for instance %(instance_id)s not found",
+      "code": 404,
+      "name": "NoActiveMigrationForInstance"
+    },
+    {
+      "msg": "No cells available matching scheduling criteria.",
+      "code": 500,
+      "name": "NoCellsAvailable"
+    },
+    {
+      "msg": "Zero fixed IPs could be found.",
+      "code": 404,
+      "name": "NoFixedIpsDefined"
+    },
+    {
+      "msg": "Interface %(interface)s not found.",
+      "code": 404,
+      "name": "NoFloatingIpInterface"
+    },
+    {
+      "msg": "Zero floating IPs exist.",
+      "code": 404,
+      "name": "NoFloatingIpsDefined"
+    },
+    {
+      "msg": "Live migration of instances with config drives is not supported in libvirt unless libvirt instance path and drive data is shared across compute nodes.",
+      "code": 500,
+      "name": "NoLiveMigrationForConfigDriveInLibVirt"
+    },
+    {
+      "msg": "No fixed IP addresses available for network: %(net)s",
+      "code": 500,
+      "name": "NoMoreFixedIps"
+    },
+    {
+      "msg": "Zero floating IPs available.",
+      "code": 404,
+      "name": "NoMoreFloatingIps"
+    },
+    {
+      "msg": "No more available networks.",
+      "code": 500,
+      "name": "NoMoreNetworks"
+    },
+    {
+      "msg": "No networks defined.",
+      "code": 404,
+      "name": "NoNetworksFound"
+    },
+    {
+      "msg": "No Unique Match Found.",
+      "code": 409,
+      "name": "NoUniqueMatch"
+    },
+    {
+      "msg": "No valid host was found. %(reason)s",
+      "code": 500,
+      "name": "NoValidHost"
+    },
+    {
+      "msg": "Resource could not be found.",
+      "code": 404,
+      "name": "NotFound"
+    },
+    {
+      "msg": "%(operation)s is not supported in conjunction with the current %(option)s setting.  Please refer to the nova config-reference.",
+      "code": 400,
+      "name": "NotSupportedWithOption"
+    },
+    {
+      "msg": "An unknown exception occurred.",
+      "code": 500,
+      "name": "NovaException"
+    },
+    {
+      "msg": "Instance %(instance_uuid)s does not specify a NUMA topology",
+      "code": 404,
+      "name": "NumaTopologyNotFound"
+    },
+    {
+      "msg": "Object action %(action)s failed because: %(reason)s",
+      "code": 500,
+      "name": "ObjectActionError"
+    },
+    {
+      "msg": "Personality file content too long",
+      "code": 413,
+      "name": "OnsetFileContentLimitExceeded"
+    },
+    {
+      "msg": "Personality file limit exceeded",
+      "code": 413,
+      "name": "OnsetFileLimitExceeded"
+    },
+    {
+      "msg": "Personality file path too long",
+      "code": 413,
+      "name": "OnsetFilePathLimitExceeded"
+    },
+    {
+      "msg": "Cannot call %(method)s on orphaned %(objtype)s object",
+      "code": 500,
+      "name": "OrphanedObjectError"
+    },
+    {
+      "msg": "No configuration information found for operating system %(os_name)s",
+      "code": 404,
+      "name": "OsInfoNotFound"
+    },
+    {
+      "msg": "Quota exceeded for resources: %(overs)s",
+      "code": 500,
+      "name": "OverQuota"
+    },
+    {
+      "msg": "OVS configuration failed with: %(inner_exception)s.",
+      "code": 500,
+      "name": "OvsConfigurationFailure"
+    },
+    {
+      "msg": "Could not load paste app '%(name)s' from %(path)s",
+      "code": 500,
+      "name": "PasteAppNotFound"
+    },
+    {
+      "msg": "Invalid PCI devices Whitelist config %(reason)s",
+      "code": 400,
+      "name": "PciConfigInvalidWhitelist"
+    },
+    {
+      "msg": "Failed to detach PCI device %(dev)s: %(reason)s",
+      "code": 500,
+      "name": "PciDeviceDetachFailed"
+    },
+    {
+      "msg": "Invalid PCI Whitelist: The PCI address %(address)s has an invalid %(field)s.",
+      "code": 500,
+      "name": "PciDeviceInvalidAddressField"
+    },
+    {
+      "msg": "Invalid PCI Whitelist: The PCI whitelist can specify devname or address, but not both",
+      "code": 500,
+      "name": "PciDeviceInvalidDeviceName"
+    },
+    {
+      "msg": "PCI device %(compute_node_id)s:%(address)s is owned by %(owner)s instead of %(hopeowner)s",
+      "code": 400,
+      "name": "PciDeviceInvalidOwner"
+    },
+    {
+      "msg": "PCI device %(compute_node_id)s:%(address)s is %(status)s instead of %(hopestatus)s",
+      "code": 400,
+      "name": "PciDeviceInvalidStatus"
+    },
+    {
+      "msg": "PCI Device %(node_id)s:%(address)s not found.",
+      "code": 404,
+      "name": "PciDeviceNotFound"
+    },
+    {
+      "msg": "PCI device %(id)s not found",
+      "code": 404,
+      "name": "PciDeviceNotFoundById"
+    },
+    {
+      "msg": "Physical Function %(compute_node_id)s:%(address)s, related to VF %(compute_node_id)s:%(vf_address)s is %(status)s instead of %(hopestatus)s",
+      "code": 400,
+      "name": "PciDevicePFInvalidStatus"
+    },
+    {
+      "msg": "Attempt to consume PCI device %(compute_node_id)s:%(address)s from empty pool",
+      "code": 500,
+      "name": "PciDevicePoolEmpty"
+    },
+    {
+      "msg": "Failed to prepare PCI device %(id)s for instance %(instance_uuid)s: %(reason)s",
+      "code": 500,
+      "name": "PciDevicePrepareFailed"
+    },
+    {
+      "msg": "PCI device request %(requests)s failed",
+      "code": 500,
+      "name": "PciDeviceRequestFailed"
+    },
+    {
+      "msg": "%(type)s hypervisor does not support PCI devices",
+      "code": 500,
+      "name": "PciDeviceUnsupportedHypervisor"
+    },
+    {
+      "msg": "Not all Virtual Functions of PF %(compute_node_id)s:%(address)s are free.",
+      "code": 400,
+      "name": "PciDeviceVFInvalidStatus"
+    },
+    {
+      "msg": "The PCI address %(address)s has an incorrect format.",
+      "code": 500,
+      "name": "PciDeviceWrongAddressFormat"
+    },
+    {
+      "msg": "Invalid PCI alias definition: %(reason)s",
+      "code": 400,
+      "name": "PciInvalidAlias"
+    },
+    {
+      "msg": "PCI alias %(alias)s is not defined",
+      "code": 500,
+      "name": "PciRequestAliasNotDefined"
+    },
+    {
+      "msg": "Number of retries to plugin (%(num_retries)d) exceeded.",
+      "code": 500,
+      "name": "PluginRetriesExceeded"
+    },
+    {
+      "msg": "Policy doesn't allow %(action)s to be performed.",
+      "code": 403,
+      "name": "PolicyNotAuthorized"
+    },
+    {
+      "msg": "Binding failed for port %(port_id)s, please check neutron logs for more information.",
+      "code": 400,
+      "name": "PortBindingFailed"
+    },
+    {
+      "msg": "Port %(port_id)s is still in use.",
+      "code": 400,
+      "name": "PortInUse"
+    },
+    {
+      "msg": "Maximum number of ports exceeded",
+      "code": 413,
+      "name": "PortLimitExceeded"
+    },
+    {
+      "msg": "Port id %(port_id)s could not be found.",
+      "code": 404,
+      "name": "PortNotFound"
+    },
+    {
+      "msg": "No free port available for instance %(instance)s.",
+      "code": 400,
+      "name": "PortNotFree"
+    },
+    {
+      "msg": "Port %(port_id)s not usable for instance %(instance)s.",
+      "code": 400,
+      "name": "PortNotUsable"
+    },
+    {
+      "msg": "Port %(port_id)s not usable for instance %(instance)s. Value %(value)s assigned to dns_name attribute does not match instance's hostname %(hostname)s",
+      "code": 400,
+      "name": "PortNotUsableDNS"
+    },
+    {
+      "msg": "Port %(port_id)s requires a FixedIP in order to be used.",
+      "code": 400,
+      "name": "PortRequiresFixedIP"
+    },
+    {
+      "msg": "Port update failed for port %(port_id)s: %(reason)s",
+      "code": 400,
+      "name": "PortUpdateFailed"
+    },
+    {
+      "msg": "The current driver does not support preserving ephemeral partitions.",
+      "code": 400,
+      "name": "PreserveEphemeralNotSupported"
+    },
+    {
+      "msg": "Project %(project_id)s could not be found.",
+      "code": 404,
+      "name": "ProjectNotFound"
+    },
+    {
+      "msg": "Quota for project %(project_id)s could not be found.",
+      "code": 404,
+      "name": "ProjectQuotaNotFound"
+    },
+    {
+      "msg": "Quota for user %(user_id)s in project %(project_id)s could not be found.",
+      "code": 404,
+      "name": "ProjectUserQuotaNotFound"
+    },
+    {
+      "msg": "QEMU guest agent is not enabled",
+      "code": 400,
+      "name": "QemuGuestAgentNotEnabled"
+    },
+    {
+      "msg": "Quota class %(class_name)s could not be found.",
+      "code": 404,
+      "name": "QuotaClassNotFound"
+    },
+    {
+      "msg": "Quota exceeded: code=%(code)s",
+      "code": 413,
+      "name": "QuotaError"
+    },
+    {
+      "msg": "Quota exists for project %(project_id)s, resource %(resource)s",
+      "code": 500,
+      "name": "QuotaExists"
+    },
+    {
+      "msg": "Quota could not be found",
+      "code": 404,
+      "name": "QuotaNotFound"
+    },
+    {
+      "msg": "Unknown quota resources %(unknown)s.",
+      "code": 404,
+      "name": "QuotaResourceUnknown"
+    },
+    {
+      "msg": "Quota usage for project %(project_id)s could not be found.",
+      "code": 404,
+      "name": "QuotaUsageNotFound"
+    },
+    {
+      "msg": "Quota usage refresh of resource %(resource)s for project %(project_id)s, user %(user_id)s, is not allowed. The allowed resources are %(syncable)s.",
+      "code": 400,
+      "name": "QuotaUsageRefreshNotAllowed"
+    },
+    {
+      "msg": "RPC is pinned to old version",
+      "code": 500,
+      "name": "RPCPinnedToOldVersion"
+    },
+    {
+      "msg": "Cannot set realtime policy in a non dedicated cpu pinning policy",
+      "code": 400,
+      "name": "RealtimeConfigurationInvalid"
+    },
+    {
+      "msg": "Realtime policy needs vCPU(s) mask configured with at least 1 RT vCPU and 1 ordinary vCPU. See hw:cpu_realtime_mask or hw_cpu_realtime_mask",
+      "code": 400,
+      "name": "RealtimeMaskNotFoundOrInvalid"
+    },
+    {
+      "msg": "Realtime policy not supported by hypervisor",
+      "code": 400,
+      "name": "RealtimePolicyNotSupported"
+    },
+    {
+      "msg": "RequestSpec not found for instance %(instance_uuid)s",
+      "code": 404,
+      "name": "RequestSpecNotFound"
+    },
+    {
+      "msg": "The requested amount of video memory %(req_vram)d is higher than the maximum allowed by flavor %(max_vram)d.",
+      "code": 500,
+      "name": "RequestedVRamTooHigh"
+    },
+    {
+      "msg": "Build of instance %(instance_uuid)s was re-scheduled: %(reason)s",
+      "code": 500,
+      "name": "RescheduledException"
+    },
+    {
+      "msg": "Quota reservation %(uuid)s could not be found.",
+      "code": 404,
+      "name": "ReservationNotFound"
+    },
+    {
+      "msg": "Resize error: %(reason)s",
+      "code": 500,
+      "name": "ResizeError"
+    },
+    {
+      "msg": "Error when creating resource monitor: %(monitor)s",
+      "code": 500,
+      "name": "ResourceMonitorError"
+    },
+    {
+      "msg": "Resource provider has allocations.",
+      "code": 500,
+      "name": "ResourceProviderInUse"
+    },
+    {
+      "msg": "Failed to revoke certificate for %(project_id)s",
+      "code": 500,
+      "name": "RevokeCertFailure"
+    },
+    {
+      "msg": "The provided RNG device path: (%(path)s) is not present on the host.",
+      "code": 400,
+      "name": "RngDeviceNotExist"
+    },
+    {
+      "msg": "Rotation param is required for backup image_type",
+      "code": 500,
+      "name": "RotationRequiredForBackup"
+    },
+    {
+      "msg": "Scheduler Host Filter %(filter_name)s could not be found.",
+      "code": 404,
+      "name": "SchedulerHostFilterNotFound"
+    },
+    {
+      "msg": "Network requires port_security_enabled and subnet associated in order to apply security groups.",
+      "code": 400,
+      "name": "SecurityGroupCannotBeApplied"
+    },
+    {
+      "msg": "Security group default rule (%rule_id)s not found.",
+      "code": 400,
+      "name": "SecurityGroupDefaultRuleNotFound"
+    },
+    {
+      "msg": "Security group %(security_group_name)s already exists for project %(project_id)s.",
+      "code": 400,
+      "name": "SecurityGroupExists"
+    },
+    {
+      "msg": "Security group %(security_group_id)s is already associated with the instance %(instance_id)s",
+      "code": 400,
+      "name": "SecurityGroupExistsForInstance"
+    },
+    {
+      "msg": "Maximum number of security groups or rules exceeded",
+      "code": 413,
+      "name": "SecurityGroupLimitExceeded"
+    },
+    {
+      "msg": "Security group %(security_group_id)s is not associated with the instance %(instance_id)s",
+      "code": 400,
+      "name": "SecurityGroupNotExistsForInstance"
+    },
+    {
+      "msg": "Security group %(security_group_id)s not found.",
+      "code": 404,
+      "name": "SecurityGroupNotFound"
+    },
+    {
+      "msg": "Security group %(security_group_id)s not found for project %(project_id)s.",
+      "code": 404,
+      "name": "SecurityGroupNotFoundForProject"
+    },
+    {
+      "msg": "Security group with rule %(rule_id)s not found.",
+      "code": 404,
+      "name": "SecurityGroupNotFoundForRule"
+    },
+    {
+      "msg": "Rule already exists in group: %(rule)s",
+      "code": 400,
+      "name": "SecurityGroupRuleExists"
+    },
+    {
+      "msg": "Maximum number of serial port exceeds %(allowed)d for %(virt_type)s",
+      "code": 400,
+      "name": "SerialPortNumberLimitExceeded"
+    },
+    {
+      "msg": "Service with host %(host)s binary %(binary)s exists.",
+      "code": 500,
+      "name": "ServiceBinaryExists"
+    },
+    {
+      "msg": "Service %(service_id)s could not be found.",
+      "code": 404,
+      "name": "ServiceNotFound"
+    },
+    {
+      "msg": "This service is older (v%(thisver)i) than the minimum (v%(minver)i) version of the rest of the deployment. Unable to continue.",
+      "code": 400,
+      "name": "ServiceTooOld"
+    },
+    {
+      "msg": "Service with host %(host)s topic %(topic)s exists.",
+      "code": 500,
+      "name": "ServiceTopicExists"
+    },
+    {
+      "msg": "Service is unavailable at this time.",
+      "code": 400,
+      "name": "ServiceUnavailable"
+    },
+    {
+      "msg": "Set admin password is not supported",
+      "code": 400,
+      "name": "SetAdminPasswdNotSupported"
+    },
+    {
+      "msg": "Shadow table with name %(name)s already exists.",
+      "code": 500,
+      "name": "ShadowTableExists"
+    },
+    {
+      "msg": "Signature verification for the image failed: %(reason)s.",
+      "code": 500,
+      "name": "SignatureVerificationError"
+    },
+    {
+      "msg": "Snapshot %(snapshot_id)s could not be found.",
+      "code": 404,
+      "name": "SnapshotNotFound"
+    },
+    {
+      "msg": "Not able to bind %(host)s:%(port)d, %(error)s",
+      "code": 500,
+      "name": "SocketPortInUseException"
+    },
+    {
+      "msg": "Not able to acquire a free port for %(host)s",
+      "code": 500,
+      "name": "SocketPortRangeExhaustedException"
+    },
+    {
+      "msg": "Storage error: %(reason)s",
+      "code": 500,
+      "name": "StorageError"
+    },
+    {
+      "msg": "Cannot find SR to read/write VDI.",
+      "code": 404,
+      "name": "StorageRepositoryNotFound"
+    },
+    {
+      "msg": "Virtual switch associated with the network adapter %(adapter)s not found.",
+      "code": 404,
+      "name": "SwitchNotFoundForNetworkAdapter"
+    },
+    {
+      "msg": "Task %(task_name)s is already running on host %(host)s",
+      "code": 500,
+      "name": "TaskAlreadyRunning"
+    },
+    {
+      "msg": "Task %(task_name)s is not running on host %(host)s",
+      "code": 500,
+      "name": "TaskNotRunning"
+    },
+    {
+      "msg": "Quota exceeded for %(overs)s: Requested %(req)s, but already used %(used)s of %(allowed)s %(overs)s",
+      "code": 413,
+      "name": "TooManyInstances"
+    },
+    {
+      "msg": "Triggering crash dump is not supported",
+      "code": 400,
+      "name": "TriggerCrashDumpNotSupported"
+    },
+    {
+      "msg": "UEFI is not supported",
+      "code": 400,
+      "name": "UEFINotSupported"
+    },
+    {
+      "msg": "Unable to automatically allocate a network for project %(project_id)s",
+      "code": 400,
+      "name": "UnableToAutoAllocateNetwork"
+    },
+    {
+      "msg": "Unable to migrate instance (%(instance_id)s) to current host (%(host)s).",
+      "code": 400,
+      "name": "UnableToMigrateToSelf"
+    },
+    {
+      "msg": "Not authorized.",
+      "code": 401,
+      "name": "Unauthorized"
+    },
+    {
+      "msg": "Undefined Block Device Mapping root: BlockDeviceMappingList contains Block Device Mappings from multiple instances.",
+      "code": 500,
+      "name": "UndefinedRootBDM"
+    },
+    {
+      "msg": "Conflict updating instance %(instance_uuid)s. Expected: %(expected)s. Actual: %(actual)s",
+      "code": 500,
+      "name": "UnexpectedDeletingTaskStateError"
+    },
+    {
+      "msg": "Conflict updating instance %(instance_uuid)s. Expected: %(expected)s. Actual: %(actual)s",
+      "code": 500,
+      "name": "UnexpectedTaskStateError"
+    },
+    {
+      "msg": "Conflict updating instance %(instance_uuid)s, but we were unable to determine the cause",
+      "code": 500,
+      "name": "UnknownInstanceUpdateConflict"
+    },
+    {
+      "msg": "Error during unshelve instance %(instance_id)s: %(reason)s",
+      "code": 500,
+      "name": "UnshelveException"
+    },
+    {
+      "msg": "Block Device Mapping is Invalid: %(auth_method)s is unsupported.",
+      "code": 400,
+      "name": "UnsupportedBDMVolumeAuthMethod"
+    },
+    {
+      "msg": "Requested hardware '%(model)s' is not supported by the '%(virt)s' virt driver",
+      "code": 400,
+      "name": "UnsupportedHardware"
+    },
+    {
+      "msg": "Requested CPU control policy not supported by host",
+      "code": 400,
+      "name": "UnsupportedHostCPUControlPolicy"
+    },
+    {
+      "msg": "Image model '%(image)s' is not supported",
+      "code": 400,
+      "name": "UnsupportedImageModel"
+    },
+    {
+      "msg": "Pointer model '%(model)s' requested is not supported by host.",
+      "code": 400,
+      "name": "UnsupportedPointerModelRequested"
+    },
+    {
+      "msg": "ServerGroup policy is not supported: %(reason)s",
+      "code": 400,
+      "name": "UnsupportedPolicyException"
+    },
+    {
+      "msg": "Virtualization type '%(virt)s' is not supported by this compute driver",
+      "code": 400,
+      "name": "UnsupportedVirtType"
+    },
+    {
+      "msg": "%(detail)s",
+      "code": 400,
+      "name": "ValidationError"
+    },
+    {
+      "msg": "API version %(version)s is not supported on this method.",
+      "code": 400,
+      "name": "VersionNotFoundForAPIMethod"
+    },
+    {
+      "msg": "Parameters %(missing_params)s not present in vif_details for vif %(vif_id)s. Check your Neutron configuration to validate that the macvtap parameters are correct.",
+      "code": 400,
+      "name": "VifDetailsMissingMacvtapParameters"
+    },
+    {
+      "msg": "vhostuser_sock_path not present in vif_details for vif %(vif_id)s",
+      "code": 400,
+      "name": "VifDetailsMissingVhostuserSockPath"
+    },
+    {
+      "msg": "Virtual Interface creation failed",
+      "code": 500,
+      "name": "VirtualInterfaceCreateException"
+    },
+    {
+      "msg": "Creation of virtual interface with unique mac address failed",
+      "code": 500,
+      "name": "VirtualInterfaceMacAddressException"
+    },
+    {
+      "msg": "Virtual interface plugin failed",
+      "code": 500,
+      "name": "VirtualInterfacePlugException"
+    },
+    {
+      "msg": "Failed to unplug virtual interface: %(reason)s",
+      "code": 500,
+      "name": "VirtualInterfaceUnplugException"
+    },
+    {
+      "msg": "Volume %(volume_id)s could not be attached. Reason: %(reason)s",
+      "code": 400,
+      "name": "VolumeAttachFailed"
+    },
+    {
+      "msg": "Block Device Mapping %(volume_id)s is a multi-attach volume and is not valid for this operation.",
+      "code": 400,
+      "name": "VolumeBDMIsMultiAttach"
+    },
+    {
+      "msg": "No volume Block Device Mapping with id %(volume_id)s.",
+      "code": 404,
+      "name": "VolumeBDMNotFound"
+    },
+    {
+      "msg": "No volume Block Device Mapping at path: %(path)s",
+      "code": 404,
+      "name": "VolumeBDMPathNotFound"
+    },
+    {
+      "msg": "Could not find a handler for %(driver_type)s volume.",
+      "code": 404,
+      "name": "VolumeDriverNotFound"
+    },
+    {
+      "msg": "Volume encryption is not supported for %(volume_type)s volume %(volume_id)s",
+      "code": 400,
+      "name": "VolumeEncryptionNotSupported"
+    },
+    {
+      "msg": "Volume resource quota exceeded",
+      "code": 403,
+      "name": "VolumeLimitExceeded"
+    },
+    {
+      "msg": "Volume %(volume_id)s did not finish being created even after we waited %(seconds)s seconds or %(attempts)s attempts. And its status is %(volume_status)s.",
+      "code": 500,
+      "name": "VolumeNotCreated"
+    },
+    {
+      "msg": "Volume %(volume_id)s could not be found.",
+      "code": 404,
+      "name": "VolumeNotFound"
+    },
+    {
+      "msg": "Volume is smaller than the minimum size specified in image metadata. Volume size is %(volume_size)i bytes, minimum size is %(image_min_disk)i bytes.",
+      "code": 500,
+      "name": "VolumeSmallerThanMinDisk"
+    },
+    {
+      "msg": "Volume %(volume_id)s is not attached to anything",
+      "code": 400,
+      "name": "VolumeUnattached"
+    },
+    {
+      "msg": "Failed to remove volume(s): (%(reason)s)",
+      "code": 400,
+      "name": "VolumesNotRemoved"
+    }
+  ]
+}
+

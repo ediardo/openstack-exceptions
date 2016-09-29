@@ -1,0 +1,20 @@
+<table class="table">
+    <thead class="thead-inverse">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Error Code</th>
+        <th>Message</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--ng-repeat="exp in service.nova"-->
+    <!--ng-repeat="exp in service.glance"-->
+    <tr ng-repeat="exp in service.name">
+        <th scope="row">{{$index + 1}}</th>
+        <td>{{exp.name}}</td>
+        <td>{{exp.code}} </td>
+        <td>{{exp.msg}}</td>
+    </tr>
+    </tbody>
+</table>
