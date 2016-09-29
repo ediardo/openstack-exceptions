@@ -21,12 +21,12 @@
     </header>
 
     <div class="container">
-
+        <h3>Openstack Exceptions</h3>
         <div class="input-group" id="input">
+
                 <span class="input-group-addon" id="basic-addon1"><b>Type
                     your error </b></span>
             <input type="text" class="form-control" ng-model="searchError" placeholder="Error msg...">
-
         </div>
 
 
@@ -37,23 +37,27 @@
                     <!--<div ng-show="false">{{excep = serviceCtrl.getService(TabCtrl.tab) | filter:{msg:searchError}}</div>-->
                     <li ng-class="{active: TabCtrl.isSet('keystone')}">
                         <a ng-click="TabCtrl.setTab('keystone')" href="#">Keystone
-                            <span ng-show="TabCtrl.isSet('keystone')" ng-class="badge">
-                                ({{$parent.filtered.length}})</span></a></li>
+                            <span ng-class="badge">
+                                ({{(serviceCtrl.getService('keystone') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length}})</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('nova')}">
                         <a ng-click="TabCtrl.setTab('nova')" href="#">Nova
                             <span ng-class="badge">
-                                ({{(serviceCtrl.getService('nova') | filter:{msg:searchError}).length}})</span></a></li>
+                                ({{(serviceCtrl.getService('nova') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length}})</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('cinder')}">
                         <a ng-click="TabCtrl.setTab('cinder')" href="#">Cinder
                             <span ng-class="badge">
-                                ({{(serviceCtrl.getService('cinder') | filter:{msg:searchError}).length}})</span></a></li>
+                                ({{(serviceCtrl.getService('cinder') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length}})</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('glance')}">
                         <a ng-click="TabCtrl.setTab('glance')" href="#">Glance
                             <span ng-class="badge">
-                                ({{(serviceCtrl.getService('glance') | filter:{msg:searchError}).length}})</span></a></li>
+                                ({{(serviceCtrl.getService('glance') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length}})</span></a></li>
                 </ul>
                 <table class="table table-hover table-striped">
                     <thead >
@@ -65,7 +69,8 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="exp in $parent.filtered = (serviceCtrl.getService(TabCtrl.tab) | filter:{msg:searchError}) ">
+                    <tr ng-repeat="exp in $parent.filtered = (serviceCtrl.getService(TabCtrl.tab)
+                                    | filter: {msg: ''}| filter:{msg:searchError})">
                         <th scope="row">{{$index + 1}}</th>
                         <td>{{exp.name}}</td>
                         <td>{{exp.code}} </td>
