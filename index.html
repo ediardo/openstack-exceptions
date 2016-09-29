@@ -21,7 +21,7 @@
     </header>
 
     <div class="container">
-        <h3>Openstack Exceptions</h3>
+        <h3>OpenStack Exceptions</h3>
         <div class="input-group" id="input">
 
                 <span class="input-group-addon" id="basic-addon1"><b>Type
@@ -33,8 +33,7 @@
         <section class="tab" ng-controller="tabController as TabCtrl">
             <div ng-controller="serviceController as serviceCtrl">
                 <ul class="nav nav-tabs">
-                    <!--$parent.filtered = (serviceCtrl.getService(TabCtrl.tab) | filter:{msg:searchError})-->
-                    <!--<div ng-show="false">{{excep = serviceCtrl.getService(TabCtrl.tab) | filter:{msg:searchError}}</div>-->
+
                     <li ng-class="{active: TabCtrl.isSet('keystone')}">
                         <a ng-click="TabCtrl.setTab('keystone')" href="#">Keystone
                             <span ng-class="badge">
