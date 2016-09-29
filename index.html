@@ -42,18 +42,18 @@
 
                     <li ng-class="{active: TabCtrl.isSet('nova')}">
                         <a ng-click="TabCtrl.setTab('nova')" href="#">Nova
-                            <span ng-show="TabCtrl.isSet('nova')" ng-class="badge">
-                                {{serviceCtrl.getService('nova').length}}</span></a></li>
+                            <span ng-class="badge">
+                                ({{(serviceCtrl.getService('nova') | filter:{msg:searchError}).length}})</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('cinder')}">
                         <a ng-click="TabCtrl.setTab('cinder')" href="#">Cinder
-                            <span ng-class="badge" ng-show="TabCtrl.isSet('cinder')">
-                                ({{$parent.filtered.length}})</span></a></li>
+                            <span ng-class="badge">
+                                ({{(serviceCtrl.getService('cinder') | filter:{msg:searchError}).length}})</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('glance')}">
                         <a ng-click="TabCtrl.setTab('glance')" href="#">Glance
-                            <span ng-class="badge" ng-show="TabCtrl.isSet('glance')">
-                                ({{$parent.filtered.length}})</span></a></li>
+                            <span ng-class="badge">
+                                ({{(serviceCtrl.getService('glance') | filter:{msg:searchError}).length}})</span></a></li>
                 </ul>
                 <table class="table table-hover table-striped">
                     <thead >
