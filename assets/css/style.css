@@ -1,0 +1,49 @@
+html {
+
+}
+
+header {
+    background-color: #e2e2e2;
+    border-bottom: 5px solid #c43723;
+    margin-bottom: 20px;
+}
+header .navbar {
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+header .navbar-inverse {
+    background-color: transparent;
+    border: 0;
+}
+header #logo {
+    height:  15%;
+    width: 15%;
+}
+
+#input {
+    padding-bottom: 5% ;
+    padding-top: 5%;
+    font-size: small;
+    font-family: "Trebuchet MS";
+}
+
+.badge {
+
+}
+
+.tab {
+    font-size: small;
+    font-family: "Trebuchet MS";
+}
+
+table {
+    font-size: small;
+    font-family: "Trebuchet MS";
+}
+
+table th {
+    text-align: left;
+    /*width: 75px;*/
+}
+
