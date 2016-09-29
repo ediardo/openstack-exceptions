@@ -22,14 +22,15 @@ header #logo {
 }
 
 #input {
-    padding-bottom: 5% ;
-    padding-top: 5%;
+    padding-bottom: 4% ;
+    padding-top: 2%;
     font-size: small;
     font-family: "Trebuchet MS";
 }
 
-.badge {
-
+h3 {
+    font-family: "Trebuchet MS";
+    color: #5e5e5e
 }
 
 .tab {
