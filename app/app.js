@@ -32,7 +32,6 @@
         this.getMessages = function () {
 
         };
-
     }]);
 
     // app.directive('serviceTable', ['$http', function($http){
