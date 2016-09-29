@@ -3,22 +3,22 @@ html {
 }
 
 header {
-    background-color: #040508;
-    border-bottom: 5px solid #a51b1b;
+    background-color: #e2e2e2;
+    border-bottom: 5px solid #c43723;
     margin-bottom: 20px;
 }
 header .navbar {
     margin-bottom: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 header .navbar-inverse {
     background-color: transparent;
     border: 0;
 }
 header #logo {
-    height: 50px;
-    width: 159px;
+    height:  15%;
+    width: 15%;
 }
 
 #input {
