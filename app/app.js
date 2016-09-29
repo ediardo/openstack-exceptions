@@ -14,20 +14,26 @@
 
     app.controller('serviceController', ['$http', function ($http) {
         var service = this;
-        service.name = [];
+        service.data = [];
 
         $http.get('data/keystone.json').success(function (data) {
-            service.name['keystone'] = data.keystone;
+            service.data['keystone'] = data.keystone;
         });
         $http.get('data/nova.json').success(function (data) {
-            service.name['nova'] = data.nova;
+            service.data['nova'] = data.nova;
         });
         $http.get('data/cinder.json').success(function (data) {
-            service.name['cinder'] = data.cinder;
+            service.data['cinder'] = data.cinder;
+        });
+        $http.get('data/glance.json').success(function (data) {
+            service.data['glance'] = data.glance;
         });
 
         this.getService = function (tab) {
-            return service.name[tab];
+            return service.data[tab];
+        }
+        this.getCount = function (tab) {
+            return getService(tab).length;
         }
         this.getMessages = function () {
 

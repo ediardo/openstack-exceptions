@@ -31,19 +31,30 @@
 
 
         <section class="tab" ng-controller="tabController as TabCtrl">
-            <ul class="nav nav-tabs">
-
-                <li ng-class="{active : TabCtrl.isSet('keystone')}">
-                    <a ng-click="TabCtrl.setTab('keystone')" href="#">Keystone</a></li>
-
-                <li ng-class="{active : TabCtrl.isSet('nova')}">
-                    <a ng-click="TabCtrl.setTab('nova')" href="#">Nova</a></li>
-
-                <li ng-class="{active : TabCtrl.isSet('cinder')}">
-                    <a ng-click="TabCtrl.setTab('cinder')" href="#">Cinder</a></li>
-            </ul>
-
             <div ng-controller="serviceController as serviceCtrl">
+                <ul class="nav nav-tabs">
+                    <!--$parent.filtered = (serviceCtrl.getService(TabCtrl.tab) | filter:{msg:searchError})-->
+                    <!--<div ng-show="false">{{excep = serviceCtrl.getService(TabCtrl.tab) | filter:{msg:searchError}}</div>-->
+                    <li ng-class="{active: TabCtrl.isSet('keystone')}">
+                        <a ng-click="TabCtrl.setTab('keystone')" href="#">Keystone
+                            <span ng-show="TabCtrl.isSet('keystone')" ng-class="badge">
+                                ({{$parent.filtered.length}})</span></a></li>
+
+                    <li ng-class="{active: TabCtrl.isSet('nova')}">
+                        <a ng-click="TabCtrl.setTab('nova')" href="#">Nova
+                            <span ng-show="TabCtrl.isSet('nova')" ng-class="badge">
+                                {{serviceCtrl.getService('nova').length}}</span></a></li>
+
+                    <li ng-class="{active: TabCtrl.isSet('cinder')}">
+                        <a ng-click="TabCtrl.setTab('cinder')" href="#">Cinder
+                            <span ng-class="badge" ng-show="TabCtrl.isSet('cinder')">
+                                ({{$parent.filtered.length}})</span></a></li>
+
+                    <li ng-class="{active: TabCtrl.isSet('glance')}">
+                        <a ng-click="TabCtrl.setTab('glance')" href="#">Glance
+                            <span ng-class="badge" ng-show="TabCtrl.isSet('glance')">
+                                ({{$parent.filtered.length}})</span></a></li>
+                </ul>
                 <table class="table table-hover table-striped">
                     <thead >
                     <tr>
@@ -54,12 +65,11 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="exp in serviceCtrl.getService(TabCtrl.tab) | filter:{msg:searchError} ">
+                    <tr ng-repeat="exp in $parent.filtered = (serviceCtrl.getService(TabCtrl.tab) | filter:{msg:searchError}) ">
                         <th scope="row">{{$index + 1}}</th>
                         <td>{{exp.name}}</td>
                         <td>{{exp.code}} </td>
                         <td><a href="#">{{exp.msg}}</a></td>
-
                     </tr>
                     </tbody>
                 </table>
