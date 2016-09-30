@@ -34,8 +34,13 @@ h3 {
 }
 
 .tab {
-    font-size: small;
+    font-size: 14px;
     font-family: "Trebuchet MS";
+}
+
+.badge {
+    background-color: #e2e2e2;
+    color: #337ab7;
 }
 
 table {
@@ -45,6 +50,19 @@ table {
 
 table th {
     text-align: left;
-    /*width: 75px;*/
+}
+
+.no-result {
+    text-align: center;
+    padding: 5px;
+    font-size: small;
+    color: #337ab7;
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+}
+
+.no-result-span {
+    text-align: center;
+    padding: 5px;
 }
 

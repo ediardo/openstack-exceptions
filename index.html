@@ -5,7 +5,6 @@
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.4.js"></script>
-    <script src="https://use.fontawesome.com/2a975a2f3a.js"></script>
     <script src="app/app.js" type="text/javascript"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -36,27 +35,39 @@
 
                     <li ng-class="{active: TabCtrl.isSet('keystone')}">
                         <a ng-click="TabCtrl.setTab('keystone')" href="#">Keystone
-                            <span ng-class="badge">
-                                ({{(serviceCtrl.getService('keystone') | filter: {msg: ''}
-                                | filter:{msg:searchError}).length}})</span></a></li>
+                            <span class="badge">
+                                {{(serviceCtrl.getService('keystone') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('nova')}">
                         <a ng-click="TabCtrl.setTab('nova')" href="#">Nova
-                            <span ng-class="badge">
-                                ({{(serviceCtrl.getService('nova') | filter: {msg: ''}
-                                | filter:{msg:searchError}).length}})</span></a></li>
+                            <span class="badge">
+                                {{(serviceCtrl.getService('nova') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('cinder')}">
                         <a ng-click="TabCtrl.setTab('cinder')" href="#">Cinder
-                            <span ng-class="badge">
-                                ({{(serviceCtrl.getService('cinder') | filter: {msg: ''}
-                                | filter:{msg:searchError}).length}})</span></a></li>
+                            <span class="badge">
+                                {{(serviceCtrl.getService('cinder') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('glance')}">
                         <a ng-click="TabCtrl.setTab('glance')" href="#">Glance
-                            <span ng-class="badge">
-                                ({{(serviceCtrl.getService('glance') | filter: {msg: ''}
-                                | filter:{msg:searchError}).length}})</span></a></li>
+                            <span class="badge">
+                                {{(serviceCtrl.getService('glance') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
+
+                    <li ng-class="{active: TabCtrl.isSet('neutron')}">
+                        <a ng-click="TabCtrl.setTab('neutron')" href="#">Neutron
+                            <span class="badge">
+                                {{(serviceCtrl.getService('neutron') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
+
+                    <li ng-class="{active: TabCtrl.isSet('swift')}">
+                        <a ng-click="TabCtrl.setTab('swift')" href="#">Swift
+                            <span class="badge">
+                                {{(serviceCtrl.getService('swift') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
                 </ul>
                 <table class="table table-hover table-striped">
                     <thead >
@@ -68,7 +79,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="exp in $parent.filtered = (serviceCtrl.getService(TabCtrl.tab)
+                    <tr ng-repeat="exp in filtered = (serviceCtrl.getService(TabCtrl.tab)
                                     | filter: {msg: ''}| filter:{msg:searchError})">
                         <th scope="row">{{$index + 1}}</th>
                         <td>{{exp.name}}</td>
@@ -77,6 +88,10 @@
                     </tr>
                     </tbody>
                 </table>
+                <div class="alert no-result-span" ng-show="!filtered.length">
+                    <span class="badge">No Results</span>
+                </div>
+                <!--<div class="alert alert-warning no-result" role="alert" ng-show="!filtered.length">No results</div>-->
             </div>
 
         </section>
