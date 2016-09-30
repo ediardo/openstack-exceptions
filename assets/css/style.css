@@ -34,8 +34,13 @@ h3 {
 }
 
 .tab {
-    font-size: small;
+    font-size: 14px;
     font-family: "Trebuchet MS";
+}
+
+.badge {
+    background-color: #e2e2e2;
+    color: #337ab7;
 }
 
 table {

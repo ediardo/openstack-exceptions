@@ -36,27 +36,39 @@
 
                     <li ng-class="{active: TabCtrl.isSet('keystone')}">
                         <a ng-click="TabCtrl.setTab('keystone')" href="#">Keystone
-                            <span ng-class="badge">
-                                ({{(serviceCtrl.getService('keystone') | filter: {msg: ''}
-                                | filter:{msg:searchError}).length}})</span></a></li>
+                            <span class="badge">
+                                {{(serviceCtrl.getService('keystone') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('nova')}">
                         <a ng-click="TabCtrl.setTab('nova')" href="#">Nova
-                            <span ng-class="badge">
-                                ({{(serviceCtrl.getService('nova') | filter: {msg: ''}
-                                | filter:{msg:searchError}).length}})</span></a></li>
+                            <span class="badge">
+                                {{(serviceCtrl.getService('nova') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('cinder')}">
                         <a ng-click="TabCtrl.setTab('cinder')" href="#">Cinder
-                            <span ng-class="badge">
-                                ({{(serviceCtrl.getService('cinder') | filter: {msg: ''}
-                                | filter:{msg:searchError}).length}})</span></a></li>
+                            <span class="badge">
+                                {{(serviceCtrl.getService('cinder') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
 
                     <li ng-class="{active: TabCtrl.isSet('glance')}">
                         <a ng-click="TabCtrl.setTab('glance')" href="#">Glance
-                            <span ng-class="badge">
-                                ({{(serviceCtrl.getService('glance') | filter: {msg: ''}
-                                | filter:{msg:searchError}).length}})</span></a></li>
+                            <span class="badge">
+                                {{(serviceCtrl.getService('glance') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
+
+                    <li ng-class="{active: TabCtrl.isSet('neutron')}">
+                        <a ng-click="TabCtrl.setTab('neutron')" href="#">Neutron
+                            <span class="badge">
+                                {{(serviceCtrl.getService('neutron') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
+
+                    <li ng-class="{active: TabCtrl.isSet('swift')}">
+                        <a ng-click="TabCtrl.setTab('swift')" href="#">Swift
+                            <span class="badge">
+                                {{(serviceCtrl.getService('swift') | filter: {msg: ''}
+                                | filter:{msg:searchError}).length || 0}}</span></a></li>
                 </ul>
                 <table class="table table-hover table-striped">
                     <thead >
