@@ -50,6 +50,19 @@ table {
 
 table th {
     text-align: left;
-    /*width: 75px;*/
+}
+
+.no-result {
+    text-align: center;
+    padding: 5px;
+    font-size: small;
+    color: #337ab7;
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+}
+
+.no-result-span {
+    text-align: center;
+    padding: 5px;
 }
 
