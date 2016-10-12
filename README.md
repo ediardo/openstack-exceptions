@@ -1,7 +1,7 @@
-OpenStack Exceptions
+OpenStack Errors
 ==========
 
-This project aims to collect all exceptions thrown to the user
+This project aims to collect all API Errors thrown to the user
 in 6 OpenStack Core Projects:
 
 - Nova
