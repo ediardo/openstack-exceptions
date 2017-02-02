@@ -66,3 +66,11 @@ table th {
     padding: 5px;
 }
 
+.panel-heading {
+    padding: 5px 10px 5px 10px;
+}
+
+.panel-body {
+    padding: 10px 10px 10px 30px;
+}
+

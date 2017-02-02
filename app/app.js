@@ -10,6 +10,9 @@
         this.isSet = function(checkTab){
           return this.tab == checkTab;
         };
+        this.getTab = function(){
+            return this.tab;
+        }
     });
 
     app.controller('serviceController', ['$http', function ($http) {
