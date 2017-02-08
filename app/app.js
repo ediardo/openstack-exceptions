@@ -1,6 +1,6 @@
 (function () {
 
-    var app = angular.module("OSExceptions", []);
+    var app = angular.module("OSExceptions", ['ui.router', 'ui.bootstrap']);
 
     app.controller('tabController', function(){
         this.tab = 'keystone';
@@ -38,9 +38,11 @@
         this.getCount = function (tab) {
             return getService(tab).length;
         }
-        this.getMessages = function () {
-
-        };
+        this.generateURL = function () {
+            // src += "?somesetting="+num;
+            // window.location.href = src;
+            console.log("heloow owrld");
+        }
     }]);
 
     // app.directive('serviceTable', ['$http', function($http){
