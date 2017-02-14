@@ -4,7 +4,24 @@
       "msg": "The account is locked for user: %(user_id)s",
       "code": 401,
       "name": "AccountLocked",
-      "title": "Unauthorized"
+      "title": "Unauthorized",
+      "comments": [
+        {
+          "username": "K M",
+          "timestamp": 1,
+          "message": "Praesent quis velit nec nibh venenatis vulputate. Nullam dignissim nisl lectus, et faucibus ipsum molestie nec."
+        },
+        {
+          "username": "C Q",
+          "timestamp": 4,
+          "message": "Quisque sapien felis, tempus eget purus a, malesuada luctus urna. Donec ultricies dui orci, et volutpat mi varius bibendum."
+        },
+        {
+          "username": "M L",
+          "timestamp": 3,
+          "message": "Nullam sit amet tortor velit. Sed scelerisque interdum lorem sed suscipit. Mauris tellus nisl, placerat eget tempor et, venenatis in ex."
+        }
+      ]
     },
     {
       "msg": "Additional authentications steps required.",

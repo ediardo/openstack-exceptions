@@ -10,8 +10,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
+    <script data-require="angular-ui-bootstrap@*" data-semver="0.9.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.min.js"></script>
+    <script data-require="angular-ui-router@0.2.7" data-semver="0.2.7" src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
 
     <script src="app/app.js" type="text/javascript"></script>
+    <script src="services/data-service.js"></script>
+    <script src="app/config.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -35,6 +40,7 @@ trusted as an accurate source of OpenStack errors
 View source code on Github <a
 href="https://github.com/ediardo/openstack-exceptions">here</a>
 </div>
+        <div ui-view=""></div>
         <div class="input-group" id="input">
 
                 <span class="input-group-addon" id="basic-addon1"><b>Type
@@ -98,79 +104,8 @@ href="https://github.com/ediardo/openstack-exceptions">here</a>
                         <th scope="row">{{$index + 1}}</th>
                         <td>{{exp.name}}</td>
                         <td>{{exp.code}} </td>
-                        <td><a href="#myModal{{$index}}" data-toggle="modal">{{exp.msg}}</a></td>
-
-                        <td>
-                            <div class="modal fade" id="myModal{{$index}}" tabindex="-1" role="dialog">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h2 class="modal-title" id="myModalLabel{{$index}}">{{exp.name}} - {{exp.code}}</h2>
-                                        </div>
-                                        <div class="modal-body">
-                                            Project: {{TabCtrl.tab | uppercase}}
-                                            <br>
-                                            Release: Ocata
-                                            <br>
-                                            Message: {{exp.msg}}
-                                            <hr>
-                                            <h4><u>Description</u></h4>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nisl erat, gravida a finibus sed,
-                                            mollis non justo. Suspendisse aliquam tincidunt ipsum, sed condimentum massa maximus quis.
-                                            Vestibulum bibendum vulputate pretium. Pellentesque venenatis non lorem non posuere. Suspendisse
-                                            commodo fringilla velit, non posuere orci lobortis a.
-                                            <br>
-                                            Phasellus erat orci, auctor at sollicitudin scelerisque, pretium quis dui. Nam tincidunt purus lorem.
-                                            Vivamus facilisis condimentum felis bibendum
-                                            mollis. Nullam eleifend massa ornare, porta libero eu, consequat sem. Maecenas ornare justo sodales,
-                                            venenatis justo luctus, luctus felis.
-                                            <hr>
-                                            <h5>Root Cause:</h5>
-                                            Sed faucibus vitae felis dictum auctor. Sed hendrerit mattis
-                                            dolor id finibus. In eget tortor vel nunc vehicula semper eget auctor urna. Phasellus eu velit a mi
-                                            mattis commodo.
-
-                                            <hr>
-                                            <form>
-                                                <span>Comments: </span>
-                                                <div>
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">
-                                                            <strong>User 1</strong> <span class="text-muted">commented 5 days ago</span>
-                                                        </div>
-                                                        <div class="panel-body">
-                                                            In non arcu a elit vehicula sodales. Cras convallis purus a placerat auctor.
-                                                            Donec purus massa, bibendum eget leo non, ultrices porta odio. Donec non porta lacus.
-                                                        </div><!-- /panel-body -->
-                                                    </div><!-- /panel panel-default -->
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">
-                                                            <strong>User 2</strong> <span class="text-muted">commented 10 mins ago</span>
-                                                        </div>
-                                                        <div class="panel-body">
-                                                            Ut lacus purus, pulvinar vel porta a, rhoncus vel risus. Sed erat libero, imperdiet
-                                                            et porta sed, rhoncus eu lacus. Suspendisse auctor mauris risus, nec aliquet sem
-                                                            pulvinar eget. Nulla quis mauris nisl.
-                                                        </div><!-- /panel-body -->
-                                                    </div><!-- /panel panel-default -->
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label for="message-text" class="form-control-label">Comment:</label>
-                                                    <textarea class="form-control" id="message-text"></textarea>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                            <button type="button" class="btn btn-primary">Submit</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
+                        <!--<td><a href="#myModal{{$index}}" data-toggle="modal">{{exp.msg}}</a></td>-->
+                        <td> <a ui-sref="modelContent({projectName: TabCtrl.tab, errorName: exp.name })">{{ exp.msg }}</a> </td>
                     </tr>
                     </tbody>
                 </table>
