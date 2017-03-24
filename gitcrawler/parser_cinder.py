@@ -121,6 +121,13 @@ parse_repo(clone_url)
 items_set = set()
 exceptions_set = set()
 result = list()
+for e in dir(exception):
+    if inspect.isclass(getattr(exception, e)):
+        if not e.startswith('_') and issubclass(getattr(exception, e), exception.CinderException):
+            exc.append({'name': e,
+                      'code': getattr(exception, e).code,
+                      'msg': getattr(exception, e).message})
+
 
 for obj in exc:
     if obj['msg'] is None:
