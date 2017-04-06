@@ -93,14 +93,20 @@ href="https://github.com/ediardo/openstack-exceptions">here</a>
                     <thead >
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Code</th>
-                        <th>Message</th>
+                        <th ng-click="sort('name')">Name
+                            <span class="glyphicon sort-icon" ng-show="sortKey=='name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                        </th>
+                        <th ng-click="sort('code')" style="width:100px">Code
+                            <span class="glyphicon sort-icon" ng-show="sortKey=='code'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                        </th>
+                        <th ng-click="sort('msg')">Message
+                            <span class="glyphicon sort-icon" ng-show="sortKey=='msg'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                        </th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr ng-repeat="exp in filtered = (serviceCtrl.getService(TabCtrl.tab)
-                                    | filter: {msg: ''}| filter:{msg:searchError})">
+                                    | filter: {msg: ''}| filter:{msg:searchError}) | orderBy:sortKey:reverse">
                         <th scope="row">{{$index + 1}}</th>
                         <td>{{exp.name}}</td>
                         <td>{{exp.code}} </td>

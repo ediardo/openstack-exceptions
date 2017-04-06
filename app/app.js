@@ -15,7 +15,7 @@
         }
     });
 
-    app.controller('serviceController', ['$http', 'DataService', function ($http, DataService) {
+    app.controller('serviceController', ['$http', '$scope', 'DataService', function ($http, $scope, DataService) {
         var service = this;
         service.data = DataService.getAllData();
 
@@ -25,6 +25,12 @@
         this.getCount = function (tab) {
             return getService(tab).length;
         };
+
+        $scope.sort = function(keyname){
+            $scope.thisname = "Heyda";
+            $scope.sortKey = keyname; //set key to selected col
+            $scope.reverse = !$scope.reverse; //toggle true false
+        }
     }]);
 
 })();
